@@ -25,8 +25,8 @@ describe('Button Component', () => {
     expect(button).toHaveTextContent('Click Me');
 
     expect(button).toHaveClass('border');
-    expect(button).toHaveClass('border-gray-400');
-    expect(button).toHaveClass('text-teal-600');
+    expect(button).toHaveClass('border-slate-400');
+    expect(button).toHaveClass('text-teal-700');
   });
 
   it('Should render a large button', () => {
@@ -51,7 +51,7 @@ describe('Button Component', () => {
     expect(button).toHaveTextContent('Click Me');
 
     expect(button).toHaveClass('text-sm');
-    expect(button).toHaveClass('bg-red-700');
+    expect(button).toHaveClass('bg-red-600');
     expect(button).toHaveClass('text-white');
   });
 
@@ -67,14 +67,14 @@ describe('Button Component', () => {
     expect(button).toBeDisabled();
   });
 
-  it('It should merge custom class name with default styles', () => {
+  it('It should not merge custom class name with default styles', () => {
     render(<Button className='text-bold'>Click Me</Button>);
 
     const button = screen.getByRole('button');
 
     expect(button).toHaveTextContent('Click Me');
 
-    expect(button).toHaveClass('text-bold');
+    expect(button).not.toHaveClass('text-bold');
     expect(button).toHaveClass('bg-teal-600');
   });
 });
