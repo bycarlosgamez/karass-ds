@@ -2,20 +2,20 @@ import React, { useState, ReactNode } from 'react';
 import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
-type AccordionProps = {
+export type AccordionProps = {
   children: ReactNode;
   defaultOpenIndex?: number;
   className?: string;
 };
 
-type InjectedProps = {
+export type InjectedProps = {
   isOpen: boolean;
   onToggle: () => void;
 };
 
 const accordionStyles = cva('bg-white min-w-md');
 
-function Accordion({ className, ...props }: AccordionProps) {
+export const Accordion = ({ className, ...props }: AccordionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(
     props.defaultOpenIndex ?? null
   );
@@ -40,6 +40,4 @@ function Accordion({ className, ...props }: AccordionProps) {
   );
 
   return <div className={mergedClassNames}>{childrenWithProps}</div>;
-}
-
-export default Accordion;
+};

@@ -1,21 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Accordion from './Accordion';
-import AccordionItem from './AccordionItem';
-import AccordionHeader from './AccordionHeader';
-import AccordionContent from './AccordionContent';
+import { Accordion } from './Accordion';
+import { AccordionItem } from './AccordionItem';
+import { AccordionHeader } from './AccordionHeader';
+import { AccordionContent } from './AccordionContent';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: { layout: 'centered' },
-  tags: ['autodocs'],
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const AccordionComponent: Story = {
   args: {
     children: (
       <Accordion>

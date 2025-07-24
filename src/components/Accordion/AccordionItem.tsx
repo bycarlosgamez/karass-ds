@@ -11,12 +11,12 @@ type AccordionItemProps = {
 
 const accordionItemStyles = cva('bg-white');
 
-function AccordionItem({
+export const AccordionItem = ({
   className,
   isOpen,
   onToggle,
   children,
-}: AccordionItemProps) {
+}: AccordionItemProps) => {
   const mergedClassNames = twMerge(accordionItemStyles(), className);
 
   const enhancedChildren = React.Children.map(children, (child) => {
@@ -30,6 +30,4 @@ function AccordionItem({
   });
 
   return <div className={mergedClassNames}>{enhancedChildren}</div>;
-}
-
-export default AccordionItem;
+};

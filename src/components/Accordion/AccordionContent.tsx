@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
-type AccordionContentProps = {
+export type AccordionContentProps = {
   children: ReactNode;
   isOpen?: boolean;
   className?: string;
@@ -12,11 +12,11 @@ const accordionContentStyles = cva(
   'px-4 py-2 bg-white text-base text-gray-500'
 );
 
-function AccordionContent({
+export const AccordionContent = ({
   className,
   isOpen,
   children,
-}: AccordionContentProps) {
+}: AccordionContentProps) => {
   const mergedClassNames = twMerge(
     accordionContentStyles(),
     !isOpen ? 'invisible h-0 overflow-hidden' : '',
@@ -24,6 +24,4 @@ function AccordionContent({
   );
 
   return <div className={mergedClassNames}>{children}</div>;
-}
-
-export default AccordionContent;
+};

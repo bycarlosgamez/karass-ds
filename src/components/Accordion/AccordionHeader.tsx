@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
-type AccordionHeaderProps = {
+export type AccordionHeaderProps = {
   children: ReactNode;
   onToggle?: () => void;
   isOpen?: boolean;
@@ -12,13 +12,12 @@ type AccordionHeaderProps = {
 const accordionHeaderStyles = cva(
   'w-full px-4 py-2 bg-white hover:bg-gray-100 font-medium text-lg flex justify-between items-center border-b border-gray-300 cursor-pointer'
 );
-
-function AccordionHeader({
+export const AccordionHeader = ({
   children,
   className,
   isOpen,
   ...props
-}: AccordionHeaderProps) {
+}: AccordionHeaderProps) => {
   const mergedClassNames = twMerge(accordionHeaderStyles(), className);
 
   return (
@@ -27,6 +26,4 @@ function AccordionHeader({
       <span className='text-lg'>{isOpen ? '−' : '+'}</span>
     </button>
   );
-}
-
-export default AccordionHeader;
+};
