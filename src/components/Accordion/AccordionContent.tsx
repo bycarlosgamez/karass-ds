@@ -12,12 +12,18 @@ const accordionContentStyles = cva(
   'px-4 py-2 bg-white text-base text-gray-500'
 );
 
-function AccordionContent({ className, ...props }: AccordionContentProps) {
-  if (!props.isOpen) return null;
+function AccordionContent({
+  className,
+  isOpen,
+  children,
+}: AccordionContentProps) {
+  const mergedClassNames = twMerge(
+    accordionContentStyles(),
+    !isOpen ? 'invisible h-0 overflow-hidden' : '',
+    className
+  );
 
-  const mergedClassNames = twMerge(accordionContentStyles(), className);
-
-  return <div className={mergedClassNames}>{props.children}</div>;
+  return <div className={mergedClassNames}>{children}</div>;
 }
 
 export default AccordionContent;
