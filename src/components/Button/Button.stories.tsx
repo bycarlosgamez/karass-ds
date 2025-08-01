@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Button from './Button';
+import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -44,11 +44,11 @@ export const Success: Story = {
   },
 };
 
-export const Neutral: Story = {
+export const Ghost: Story = {
   args: {
-    variant: 'neutral',
+    variant: 'ghost',
     size: 'medium',
-    children: 'Neutral',
+    children: 'Ghost',
   },
 };
 

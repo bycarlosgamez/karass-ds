@@ -1,0 +1,167 @@
+/* Button.module.css
+.base {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #0d9488;
+  color: white;
+  border: 1px solid #0d9488;
+}
+
+.outlined {
+  border: 1px solid #9ca3af;
+  color: #0d9488;
+}
+
+.destructive {
+  background-color: #b91c1c;
+  color: white;
+  border: 1px solid #b91c1c;
+}
+
+.success {
+  background-color: #16a34a;
+  color: white;
+  border: 1px solid #16a34a;
+}
+
+.neutral {
+  background-color: #3b82f6;
+  color: white;
+  border: 1px solid #3b82f6;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.medium {
+  font-size: 1rem;
+}
+
+.large {
+  font-size: 1.125rem;
+}
+
+.disabled {
+  background-color: #d1d5db;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  cursor: not-allowed;
+} */
+
+.button {
+  align-items: center;
+  background-color: #0d9488;
+  border-color: transparent;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  transition: background-color 0.2s;
+}
+
+/* Focus visible styles */
+.button:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* Disabled styles */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  background-color: #0f766e;
+}
+
+.button:active {
+  background-color: #115e59;
+}
+
+/* Variant: outlined */
+.outlined {
+  background-color: white;
+  color: #0f766e;
+  border-color: #94a3b8;
+}
+
+.outlined:hover {
+  background-color: #f1f5f9;
+}
+
+.outlined:active {
+  background-color: #e2e8f0;
+}
+
+/* Variant: destructive */
+.destructive {
+  background-color: #dc2626;
+  color: white;
+  border-color: transparent;
+}
+
+.destructive:hover {
+  background-color: #b91c1c;
+}
+
+.destructive:active {
+  background-color: #991b1b;
+}
+
+/* Variant: success */
+.success {
+  background-color: #15803d;
+  color: white;
+  border-color: transparent;
+}
+
+.success:hover {
+  background-color: #166534;
+}
+
+.success:active {
+  background-color: #14532d;
+}
+
+/* Variant: neutral */
+.neutral {
+  background-color: #2563eb;
+  color: white;
+  border-color: transparent;
+}
+
+.neutral:hover {
+  background-color: #1d4ed8;
+}
+
+.neutral:active {
+  background-color: #1e40af;
+}
+
+/* Variant: ghost */
+.ghost {
+  background-color: transparent;
+  color: #0d9488;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ghost:hover {
+  background-color: #f1f5f9;
+}
+
+.ghost:active {
+  background-color: #e2e8f0;
+}
