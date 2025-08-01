@@ -1,3 +1,4 @@
+import path from 'path';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import tailwindcss from '@tailwindcss/vite';
@@ -9,12 +10,16 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-
     dts({
       insertTypesEntry: true,
       exclude: ['**/*.stories.ts', '**/*.test.tsx'],
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   build: {
     lib: {
       entry: './src/index.ts',
@@ -24,7 +29,12 @@ export default defineConfig({
     },
     rollupOptions: {
       external: Object.keys(peerDependencies),
-      output: { globals: { react: 'React', 'react-dom': 'ReactDOM' } },
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
     },
   },
 });
