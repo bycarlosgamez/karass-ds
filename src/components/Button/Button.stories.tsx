@@ -5,7 +5,16 @@ const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   parameters: { layout: 'centered' },
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
+  args: {
+    children: 'Button',
+    disabled: false,
+  },
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+  },
 };
 
 export default meta;
