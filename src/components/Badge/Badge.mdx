@@ -1,0 +1,39 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/addon-docs/blocks';
+import { Badge } from './Badge.tsx';
+import BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+<Title>Badge</Title>
+
+Simple visual indicators for status, metadata, and categorization
+
+<Description>
+Badges provide concise visual cues to highlight status, context, or categorization in the UI.
+Use them to annotate items, label content, or provide supplemental information across interfaces.
+
+Variants available include: `default`, `primary`, `success`, `danger`, `warning`, and `information`.
+
+Designed for flexibility — you can pass text directly as children, and extend styling via `variant` props.
+
+</Description>
+
+## 🚀 Usage
+
+<Primary />
+
+<Controls />
+
+## 🎨 Variants
+
+Badges support multiple color variants to match semantic meaning and visual hierarchy.
+
+<Stories />

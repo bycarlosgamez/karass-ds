@@ -1,0 +1,46 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/addon-docs/blocks';
+import InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+<Title>Input</Title>
+
+Accessible and customizable text input component for form interfaces
+
+## 🎤 Description
+
+The `Input` component provides a simple and reusable form control for text-based user input. It supports standard HTML input attributes and is styled for visual consistency across form layouts. Error feedback, placeholder customization, and flexible labeling make it ideal for accessible form UX.
+
+Common use cases include:
+
+- Text entry in login or sign-up forms
+- Search bars, filter inputs, and form fields
+- Controlled and uncontrolled inputs in React applications
+- Inputs requiring validation or visual feedback
+
+### ✨ Supported Props
+
+- **`label`** – Accessible label rendered alongside the input
+- **`placeholder`** – Hint text displayed inside the input
+- **`disabled`** – Prevents interaction and visually dims the field
+- **`required`** – Indicates the field must be completed before submission
+- **`error`** – Displays validation feedback and applies red ring styling
+- **`unlabeled`** – Visually hides the label while preserving accessibility
+- **`details`** – Supplemental description text beneath the input
+
+## 🚀 Usage Example
+
+<Primary />
+<Controls />
+
+## 📦 Variants and States
+
+<Stories />

@@ -1,0 +1,27 @@
+import { Meta, Title, Stories } from '@storybook/addon-docs/blocks';
+import AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+<Title>Accordion</Title>
+
+An Accordion displays collapsible content panels for presenting information in
+a limited space. Use it to group related content that users can expand or
+collapse as needed.
+
+## 🎤 Description
+
+Accordions are interactive UI elements used to toggle the visibility of related content. Perfect for FAQs, expandable lists, and settings panels, they organize content into discrete, collapsible blocks.
+
+This Accordion system is composed of modular elements that offer high customizability:
+
+- **Accordion**: The root container managing all toggling behavior.
+- **AccordionItem**: Encapsulates a single expandable section.
+- **AccordionHeader**: The trigger that expands or collapses its associated content.
+- **AccordionContent**: Holds the detailed content shown when open.
+
+You can use multiple `AccordionItem` blocks for independent toggling, or control them via props for single-section behavior. Custom styles, icons, and transitions can be layered in to tailor the UX for your application.
+
+## 🚀 Usage
+
+<Stories />

@@ -1,0 +1,49 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from '@storybook/addon-docs/blocks';
+import SelectStories from './Select.stories';
+
+<Meta of={SelectStories} />
+
+<Title>Select</Title>
+
+Accessible and customizable dropdown component for form interfaces
+
+## 🎤 Description
+
+The `Select` component renders a stylized HTML `<select>` element with full support for accessibility, styling variants, placeholder behavior, validation feedback, and dynamic labeling.
+
+Ideal for form-based interfaces, it provides consistency and flexibility across layouts.
+
+Common use cases include:
+
+- Form inputs for predefined options
+- Controlled selection fields
+- Accessible filters and settings menus
+
+## 🧩 Props Overview
+
+- **`label`** – Accessible label linked via `htmlFor` and `id`
+- **`options`** – Array of `{ label, value }` for dropdown choices
+- **`variant`** – Visual styling (`primary` | `secondary`)
+- **`disabled`** – Toggles non-interactive styling and behavior
+- **`placeholder`** – Renders prompt text as hidden `<option>`
+- **`error`** – Displays validation feedback below the input
+- **`required`** – Adds a red badge indicator to the label
+- **`unlabeled`** – Visually hides the label while preserving accessibility
+- **`id`** – Required `id` that pairs `label` with the `select`
+
+## 🚀 Usage Example
+
+<Primary />
+<Controls />
+
+## 🧪 Variants and States
+
+<Stories />
