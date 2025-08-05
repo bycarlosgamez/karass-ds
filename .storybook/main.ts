@@ -1,7 +1,9 @@
+// .storybook/main.ts
 import type { StorybookConfig } from '@storybook/react-vite';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
+// Emulate __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -12,7 +14,7 @@ const config: StorybookConfig = {
   ],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials', // ensure this is installed
+    '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-docs'
   ],
