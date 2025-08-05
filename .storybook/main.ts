@@ -1,39 +1,35 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
 import type { StorybookConfig } from '@storybook/react-vite';
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 const config: StorybookConfig = {
   stories: [
     '../src/**/*.mdx',
-    '../src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/**/*.stories.@(js|jsx|ts|tsx)'
   ],
   addons: [
-    '@storybook/addon-onboarding',
     '@storybook/addon-links',
+    '@storybook/addon-essentials', // ensure this is installed
     '@storybook/addon-a11y',
-    '@storybook/addon-themes',
-    '@storybook/addon-docs',
+    '@storybook/addon-docs'
   ],
   framework: {
-    name:  '@storybook/react-vite',
-    options:{},
+    name: '@storybook/react-vite',
+    options: {}
   },
-  core: {
-    disableTelemetry: true,
-  },
-  viteFinal: (baseConfig) => ({
-    ...baseConfig,
+  viteFinal: async (viteConfig) => ({
+    ...viteConfig,
     resolve: {
-      ...(baseConfig.resolve || {}),
+      ...(viteConfig.resolve ?? {}),
       alias: {
-        ...(baseConfig.resolve?.alias || {}),
-        '@': path.resolve(__dirname, '../src'),
-      },
-    },
-  }),
+        ...(viteConfig.resolve?.alias ?? {}),
+        '@': path.resolve(__dirname, '../src')
+      }
+    }
+  })
 };
 
 export default config;
