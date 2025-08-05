@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-D0ypetOs.js";import{useMDXComponents as i}from"./index-COEOmF3T.js";import{M as o,T as r,P as a,C as c,S as d}from"./blocks-BP7d7i2e.js";import"./Select-fTMJd5uS.js";import l from"./Button.stories-BAoDQsQz.js";import"./iframe-CuTnsByq.js";import"./preload-helper-D6kgxu3v.js";import"./index-ZXP7M1XK.js";function e(s){const t={br:"br",h2:"h2",p:"p",...i(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(o,{of:l}),`
+import{j as n}from"./jsx-runtime-q23lrDa2.js";import{useMDXComponents as i}from"./index-BDWslUlv.js";import{M as o,T as r,P as a,C as c,S as d}from"./blocks-B1HhbFiE.js";import"./Select-BT_RNQLg.js";import l from"./Button.stories-CqmB0EiT.js";import"./iframe-pvssNZVv.js";import"./preload-helper-D6kgxu3v.js";import"./index-C0UApWfT.js";function e(s){const t={br:"br",h2:"h2",p:"p",...i(),...s.components};return n.jsxs(n.Fragment,{children:[n.jsx(o,{of:l}),`
 `,n.jsx(r,{children:"Button"}),`
 `,n.jsx(t.p,{children:"Versatile action triggers for forms, flows, and feedback"}),`
 `,n.jsx(t.h2,{id:"-description",children:"🎤 Description"}),`

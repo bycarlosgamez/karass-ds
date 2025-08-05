@@ -8,19 +8,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config: StorybookConfig = {
-  stories: [
-    '../src/**/*.mdx',
-    '../src/**/*.stories.@(js|jsx|ts|tsx)'
-  ],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
   ],
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   viteFinal: async (viteConfig) => ({
     ...viteConfig,
@@ -28,10 +25,10 @@ const config: StorybookConfig = {
       ...(viteConfig.resolve ?? {}),
       alias: {
         ...(viteConfig.resolve?.alias ?? {}),
-        '@': path.resolve(__dirname, '../src')
-      }
-    }
-  })
+        '@': path.resolve(__dirname, '../src'),
+      },
+    },
+  }),
 };
 
 export default config;

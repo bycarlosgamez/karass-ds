@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-D0ypetOs.js";import{useMDXComponents as t}from"./index-COEOmF3T.js";import{M as i,T as o,P as a,C as l,S as c}from"./blocks-BP7d7i2e.js";import"./Select-fTMJd5uS.js";import d from"./Card.stories-5zpXT-Vu.js";import"./iframe-CuTnsByq.js";import"./preload-helper-D6kgxu3v.js";import"./index-ZXP7M1XK.js";function s(r){const e={h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...t(),...r.components};return n.jsxs(n.Fragment,{children:[n.jsx(i,{of:d}),`
+import{j as n}from"./jsx-runtime-q23lrDa2.js";import{useMDXComponents as t}from"./index-BDWslUlv.js";import{M as i,T as o,P as a,C as l,S as c}from"./blocks-B1HhbFiE.js";import"./Select-BT_RNQLg.js";import d from"./Card.stories-DUK1t5Su.js";import"./iframe-pvssNZVv.js";import"./preload-helper-D6kgxu3v.js";import"./index-C0UApWfT.js";function s(r){const e={h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...t(),...r.components};return n.jsxs(n.Fragment,{children:[n.jsx(i,{of:d}),`
 `,n.jsx(o,{children:"Card"}),`
 `,n.jsx(e.p,{children:"Composable container with structured subcomponents for rich visual blocks"}),`
 `,n.jsx(e.h2,{id:"-description",children:"🎤 Description"}),`
